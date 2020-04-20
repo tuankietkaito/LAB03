@@ -10,50 +10,44 @@
 
 int main()
 {
-    pid_t pidB, pidC, pidD;
-    pidD = fork();
-    if (pidD == 0)
+    pid_t pB, pC, pD, pE, pF, pG, pI;
+    pB = fork();
+    if (pB == 0)
     {
-        printf("Process ID: %d", getppid());
-        getchar();
-    }
-    else
-    {
-        pidC = fork();
-        if (pidC == 0)
+        pE = fork();
+        if (pE == 0)
         {
-            pid_t pidG;
-            pidG = fork();
-            if (pidG == 0)
+            pI = fork();
+            if (pI == 0)
                 getchar();
             else
                 getchar();
         }
         else
         {
-            pidB = fork();
-            if (pidB == 0)
-            {
-                pid_t pidE, pidF;
-                pidF = fork();
-                if (pidF == 0)
-                    getchar();
-                else
-                {
-                    pidE = fork();
-                    if (pidE == 0)
-                    {
-                        pid_t pidI;
-                        pidI = fork();
-                        if (pidI == 0)
-                            getchar();
-                        else
-                            getchar();
-                    }
-                    else
-                        getchar();
-                }
-            }
+            pF = fork();
+            if (pF == 0)
+                getchar();
+            else
+                getchar();
+        }
+    }
+    else
+    {
+        pC = fork();
+        if (pC == 0)
+        {
+            pG = fork();
+            if (pG == 0)
+                getchar();
+            else
+                getchar();
+        }
+        else
+        {
+            pD = fork();
+            if (pD == 0)
+                printf("ID = %d", getppid());
             else
                 getchar();
         }
