@@ -47,7 +47,7 @@ int main()
         {
             pD = fork();
             if (pD == 0)
-                printf('ID = %d', getppid());
+                printf("ID = %d", getppid());
             else
                 getchar();
         }
