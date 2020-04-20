@@ -1,0 +1,15 @@
+BONUS 4
+
+    #include <stdio.h>
+    #include <unistd.h>
+    int main() {
+        fork();
+        fork();
+    }
+
+p0 -+- p1 - p3
+    `- p2
+
+Initial process: p0
+After the first fork(): p1 is created
+After the second fork(): p2, p3 are created
